@@ -35,5 +35,11 @@ namespace _4Controls
             ControlBatton controlBatton = new ControlBatton();
             controlBatton.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            CheckBoxRadioButton checkBoxRadioButton = new CheckBoxRadioButton();
+            checkBoxRadioButton.Show();
+        }
     }
 }
