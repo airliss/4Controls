@@ -1,0 +1,83 @@
+﻿<Window x:Class="_4Controls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_4Controls"
+        mc:Ignorable="d"
+        Title="Control" Height="450" Width="800">
+    
+    <!--
+    Стиль примененный вообще ко всем кнопкам на окне
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="10,0" />
+            <Setter Property="Padding" Value="10,10" />
+        </Style>
+    </Window.Resources>
+    -->
+    
+    <WrapPanel Orientation="Vertical">
+        <WrapPanel.Resources>
+            <!--Определение стиля для всех элементов типа-->
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="5,5" />
+                <Setter Property="Padding" Value="5,5" />
+            </Style>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Margin" Value="5,5" />
+                <Setter Property="Padding" Value="5,5" />
+            </Style>
+        </WrapPanel.Resources>
+
+        <Button x:Name="button1" Content="Обращение по имени" Click="Button_Click"/>
+        <!--Пример видимости/невидимости элементов/контролов-->
+        <Button Visibility="Collapsed" Content="Панель Collapsed" /> <!--Visibility="Collapsed" не видимая кнопка, не участвует в компановке-->
+        <Button Content="Visible Button" />
+        <Button Visibility="Hidden" Content="Панель Collapsed" /> <!--Visibility="Hidden" не видимая кнопка, участвует в компановке-->
+        <Button Content="Visible Button" />
+        <Button Content="1"/>
+        <!--Работа со шрифтами-->
+        <Label Content="Verdana13" FontFamily="Verdana" FontSize="13" FontStretch="Expanded"/>
+        <Label Content="Verdana13" FontFamily="Verdana" FontSize="13" FontStyle="Italic" FontWeight="Bold" FontStretch="Condensed"/>
+        <!--выравнивание относительно пространства-->
+        <Label Width="100" Content="Ver13" FlowDirection="RightToLeft"/> 
+        <Label Width="100" Content="Ver13" FlowDirection="LeftToRight"/>
+        <Button Background="Green" Foreground="DarkRed" FontWeight="Bold" Content="Цвет кнопки и букв" />
+        <Button Content="Градиент">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="Red"/>
+                    <GradientStop Color="#FFF2FF03" Offset="1"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="button2" Height="150">
+            <StackPanel>
+                <TextBlock Text="Набор кнопкок" />
+                <Button Background="Red" Height="25" Content="Red" />
+                <Button Background="Yellow" Height="25" Content="Yellow" />
+                <Button Background="Green" Height="25" Content="Green" />
+            </StackPanel>
+         </Button>
+
+        <StackPanel>
+            <Button HorizontalContentAlignment="Left" Content="Left" Height="25" Width="60" />
+            <Button HorizontalContentAlignment="Right" Content="Right" Height="25" Width="60" />
+            <Button HorizontalContentAlignment="Center" Content="Center" Height="25" Width="60" />
+        </StackPanel>
+
+        <StackPanel>
+            <Button Padding="10 5 0 5" HorizontalContentAlignment="Left" Content="Hello World"/><!--Точка отсчета выравнивания от левого края-->
+            <Button Padding="10 10 10 10" HorizontalContentAlignment="Center" Content="Hello World"/><!--Точка отсчета выравнивания от центра-->
+            <Button Padding="10" Content="Hello Word"/> <!--Запись выше равноценна этой-->
+        </StackPanel>
+
+        <Button Content="Control Batton" Click="Button_Click_1"/>
+
+    </WrapPanel>
+
+    
+    
+</Window>
