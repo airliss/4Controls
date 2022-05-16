@@ -41,5 +41,11 @@ namespace _4Controls
             CheckBoxRadioButton checkBoxRadioButton = new CheckBoxRadioButton();
             checkBoxRadioButton.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            ToolTipHelp toolTipHelp = new ToolTipHelp();
+            toolTipHelp.Show();
+        }
     }
 }

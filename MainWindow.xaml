@@ -76,6 +76,7 @@
 
         <Button Content="Control Batton" Click="Button_Click_1"/>
         <Button Content="CheckBoxRadioButton" Click="Button_Click_2"/>
+        <Button Content="ToolTipHelp" Click="Button_Click_3"/>
 
     </WrapPanel>
 
