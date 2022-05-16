@@ -30,6 +30,11 @@ namespace _4Controls
             checkBox4.Checked += checkBox_Checked;
             // добавление в StackPanel
             stackPanel.Children.Add(checkBox4);
+
+            //Программная реализация чекбокса
+            RadioButton rb = new RadioButton { IsChecked = true, GroupName = "Languages", Content = "JavaScript" };
+            rb.Checked += RadioButton_Checked;
+            stackPanel1.Children.Add(rb);
         }
 
         private void checkBox_Checked(object sender, RoutedEventArgs e)
@@ -45,6 +50,12 @@ namespace _4Controls
         private void checkBox_Indeterminate(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(checkBox.Content.ToString() + " в неопределенном состоянии");
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton pressed = (RadioButton)sender;
+            MessageBox.Show(pressed.Content.ToString());//Выводит контент нажатого чека
         }
     }
 }
