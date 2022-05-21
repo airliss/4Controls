@@ -47,5 +47,11 @@ namespace _4Controls
             ToolTipHelp toolTipHelp = new ToolTipHelp();
             toolTipHelp.Show();
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            GroupBox_Expander groupBox_Expander = new GroupBox_Expander();
+            groupBox_Expander.Show();
+        }
     }
 }
