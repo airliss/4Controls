@@ -53,5 +53,11 @@ namespace _4Controls
             GroupBox_Expander groupBox_Expander = new GroupBox_Expander();
             groupBox_Expander.Show();
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            ScrollViewer scrollViewer = new ScrollViewer();
+            scrollViewer.Show();
+        }
     }
 }
